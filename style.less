@@ -1,0 +1,125 @@
+/* basic font settings */
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"]
+{
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+
+/* Colors: */
+@purple: #9035DF;
+@green: #97CB49;
+@yellow: #F7D741;
+@red: #F05751;
+@grey: #ccc;
+@lightgrey: #ddd;
+
+.divider
+{
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid @lightgrey;
+	margin: 40px 0;
+}
+
+#wrap
+{
+	width: 720px;
+	margin: 50px auto;
+}
+h1
+{
+	text-align: center;
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+p
+{
+	font-size: 120%;
+	line-height: 1.2;
+}
+
+.colorblocks
+{
+	div
+	{
+		display: inline-block;
+		width: 100px;
+		height: 100px;
+	}
+	.red
+	{
+		background: @red;
+	}
+	.yellow
+	{
+		background: @yellow;
+	}
+	.green
+	{
+		background: @green;
+	}
+	.purple
+	{
+		background: @purple;
+	}
+}
+
+/* Buttons */
+.button
+{
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	background: @grey;
+	font-size: 120%;
+	border-radius: 3px;
+	border-bottom: 2px solid darken(@grey, 20%);
+	-webkit-box-shadow: 0px 0px 19px -10px rgba(34,34,34,1);
+	-moz-box-shadow: 0px 0px 19px -10px rgba(34,34,34,1);
+	box-shadow: 0px 3px 19px -10px rgba(34,34,34,1);
+	transition: background 0.3s;
+	-webkit-transition: background 0.3s;
+}
+.button:hover
+{
+	background: darken(@grey, 20%);
+}
+.button.red
+{
+	background: @red;
+	border-bottom: 2px solid darken(@red, 20%);
+}
+.button.red:hover
+{
+	background: darken(@red, 20%);
+}
+.button.yellow
+{
+	background: @yellow;
+	border-bottom: 2px solid darken(@yellow, 20%);
+}
+.button.yellow:hover
+{
+	background: darken(@yellow, 20%);
+}
+.button.green
+{
+	background: @green;
+	border-bottom: 2px solid darken(@green, 20%);
+}
+.button.green:hover
+{
+	background: darken(@green, 20%);
+}
+.button.purple
+{
+	background: @purple;
+	border-bottom: 2px solid darken(@purple, 20%);
+}
+.button.purple:hover
+{
+	background: darken(@purple, 20%);
+}

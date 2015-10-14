@@ -1,0 +1,99 @@
+/* basic font settings */
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+}
+/* Colors: */
+.divider {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  margin: 40px 0;
+}
+#wrap {
+  width: 720px;
+  margin: 50px auto;
+}
+h1 {
+  text-align: center;
+  font-weight: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+p {
+  font-size: 120%;
+  line-height: 1.2;
+}
+.colorblocks div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+.colorblocks .red {
+  background: #f05751;
+}
+.colorblocks .yellow {
+  background: #f7d741;
+}
+.colorblocks .green {
+  background: #97cb49;
+}
+.colorblocks .purple {
+  background: #9035df;
+}
+/* Buttons */
+.button {
+  padding: 10px 30px;
+  color: #fff;
+  text-decoration: none;
+  background: #cccccc;
+  font-size: 120%;
+  border-radius: 3px;
+  border-bottom: 2px solid #999999;
+  -webkit-box-shadow: 0px 0px 19px -10px #222222;
+  -moz-box-shadow: 0px 0px 19px -10px #222222;
+  box-shadow: 0px 3px 19px -10px #222222;
+  transition: background 0.3s;
+  -webkit-transition: background 0.3s;
+}
+.button:hover {
+  background: #999999;
+}
+.button.red {
+  background: #f05751;
+  border-bottom: 2px solid #ca1811;
+}
+.button.red:hover {
+  background: #ca1811;
+}
+.button.yellow {
+  background: #f7d741;
+  border-bottom: 2px solid #caa808;
+}
+.button.yellow:hover {
+  background: #caa808;
+}
+.button.green {
+  background: #97cb49;
+  border-bottom: 2px solid #618727;
+}
+.button.green:hover {
+  background: #618727;
+}
+.button.purple {
+  background: #9035df;
+  border-bottom: 2px solid #5b1896;
+}
+.button.purple:hover {
+  background: #5b1896;
+}
