@@ -1,99 +1,231 @@
 /* basic font settings */
-html,
-button,
-input,
-select,
-textarea,
-.pure-g [class*="pure-u"] {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"]
+{
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
 }
+
 /* Colors: */
-.divider {
+@purple: #9035DF;
+@green: #97CB49;
+@yellow: #F7D741;
+@red: #F05751;
+@grey: #ccc;
+@lightgrey: #ddd;
+@bgGrey: #FBFBFB;
+
+body
+{
+  background-color: #fbfbfb;
+}
+
+.divider
+{
   display: block;
   width: 100%;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid @lightgrey;
   margin: 40px 0;
 }
-#wrap {
+
+#wrap
+{
   width: 720px;
   margin: 50px auto;
 }
-h1 {
+h1
+{
   text-align: center;
   font-weight: normal;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6
+{
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
-p {
+p
+{
   font-size: 120%;
   line-height: 1.2;
 }
-.colorblocks div {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
+
+.colorblocks
+{
+  div
+  {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+  }
+  .red
+  {
+    background: @red;
+  }
+  .yellow
+  {
+    background: @yellow;
+  }
+  .green
+  {
+    background: @green;
+  }
+  .purple
+  {
+    background: @purple;
+  }
 }
-.colorblocks .red {
-  background: #f05751;
-}
-.colorblocks .yellow {
-  background: #f7d741;
-}
-.colorblocks .green {
-  background: #97cb49;
-}
-.colorblocks .purple {
-  background: #9035df;
-}
+
 /* Buttons */
-.button {
+.button
+{
   padding: 10px 30px;
   color: #fff;
   text-decoration: none;
-  background: #cccccc;
+  background: @grey;
   font-size: 120%;
   border-radius: 3px;
-  border-bottom: 2px solid #999999;
-  -webkit-box-shadow: 0px 0px 19px -10px #222222;
-  -moz-box-shadow: 0px 0px 19px -10px #222222;
-  box-shadow: 0px 3px 19px -10px #222222;
+  border-bottom: 2px solid darken(@grey, 20%);
+  -webkit-box-shadow: 0px 0px 19px -10px rgba(34,34,34,1);
+  -moz-box-shadow: 0px 0px 19px -10px rgba(34,34,34,1);
+  box-shadow: 0px 3px 19px -10px rgba(34,34,34,1);
   transition: background 0.3s;
   -webkit-transition: background 0.3s;
 }
-.button:hover {
-  background: #999999;
+.button:hover
+{
+  background: darken(@grey, 20%);
 }
-.button.red {
-  background: #f05751;
-  border-bottom: 2px solid #ca1811;
+.button.red
+{
+  background: @red;
+  border-bottom: 2px solid darken(@red, 20%);
 }
-.button.red:hover {
-  background: #ca1811;
+.button.red:hover
+{
+  background: darken(@red, 20%);
 }
-.button.yellow {
-  background: #f7d741;
-  border-bottom: 2px solid #caa808;
+.button.yellow
+{
+  background: @yellow;
+  border-bottom: 2px solid darken(@yellow, 20%);
 }
-.button.yellow:hover {
-  background: #caa808;
+.button.yellow:hover
+{
+  background: darken(@yellow, 20%);
 }
-.button.green {
-  background: #97cb49;
-  border-bottom: 2px solid #618727;
+.button.green
+{
+  background: @green;
+  border-bottom: 2px solid darken(@green, 20%);
 }
-.button.green:hover {
-  background: #618727;
+.button.green:hover
+{
+  background: darken(@green, 20%);
 }
-.button.purple {
-  background: #9035df;
-  border-bottom: 2px solid #5b1896;
+.button.purple
+{
+  background: @purple;
+  border-bottom: 2px solid darken(@purple, 20%);
 }
-.button.purple:hover {
-  background: #5b1896;
+.button.purple:hover
+{
+  background: darken(@purple, 20%);
+}
+
+.main
+{
+  
+}
+
+/* Dashnav */
+.dashnav
+{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  padding-top: 50px;
+  min-height: 600px;
+  border-right: 1px solid @lightgrey;
+  font-family: "Roboto Light", Helvetica, Arial, sans-serif;
+
+  li
+  {
+    border-bottom: 1px solid @lightgrey;
+    background: #fff;
+    display: block;
+  }
+
+  a
+  {
+    display: block;
+    font-weight: lighter;
+    color: #222;
+    font-size: 120%;
+    padding: 10px 5px;
+    border-left: 3px solid #fff;
+  }
+
+  a i
+  {
+    margin-right: 5px;
+  }
+
+  a.active, a:hover
+  {
+    border-left-color: @yellow;
+    background-color: #f7f7f7;
+  }
+
+}
+
+.dashtopnav
+{
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 20px;
+
+  li
+  {
+    display: inline;
+  }
+
+  a
+  {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #777;
+  }
+
+  a.active
+  {
+    border-bottom: 2px solid @yellow;
+  }
+}
+
+.block
+{
+  border: 1px solid #d8d8d8;
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  margin-bottom: 30px;
+
+  p
+  {
+    font-size: 100%;
+  }
+
+  .content
+  {
+    padding: 20px;
+  }
+
+  .head
+  {
+    background: #f7f7f7;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 110%;
+    color: #777;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
 }
